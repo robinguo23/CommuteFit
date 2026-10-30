@@ -1,0 +1,52 @@
+{
+  "date": "20261027",
+  "time": "0900",
+  "scenarios": [
+    {
+      "name": "tube-transfer",
+      "purpose": "Check a whole multi-leg Tube route; this example pair must be confirmed to yield a transfer in returned legs.",
+      "journey": {
+        "from": "940GZZLUCHX",
+        "to": "940GZZLUKSX",
+        "modes": ["tube"]
+      },
+      "fareTo": [
+        {
+          "from": "940GZZLUCHX",
+          "to": "940GZZLUKSX",
+          "purpose": "Whole station-pair FareTo reference, not per-leg fare"
+        }
+      ]
+    },
+    {
+      "name": "bus-plus-tube",
+      "purpose": "Candidate mixed-mode case; verify the returned legs actually include both bus and Tube, otherwise replace the endpoint pair.",
+      "journey": {
+        "from": "Victoria Coach Station, London",
+        "to": "Baker Street Underground Station",
+        "modes": ["bus", "tube"]
+      },
+      "fareTo": []
+    },
+    {
+      "name": "consecutive-bus",
+      "purpose": "Candidate bus-only case; verify the returned route has multiple bus legs and inspect fare/Hopper fields. Do not treat each bus leg as a separately chargeable fare.",
+      "journey": {
+        "from": "Trafalgar Square, London",
+        "to": "Piccadilly Circus, London",
+        "modes": ["bus"]
+      },
+      "fareTo": []
+    },
+    {
+      "name": "rail-transfer",
+      "purpose": "Candidate National Rail case; verify the returned route includes a transfer and inspect its fare basis. FareTo support must be established from its actual response.",
+      "journey": {
+        "from": "London Bridge National Rail Station",
+        "to": "Liverpool Street National Rail Station",
+        "modes": ["national-rail"]
+      },
+      "fareTo": []
+    }
+  ]
+}

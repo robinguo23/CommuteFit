@@ -1,0 +1,15 @@
+.scenario-section { margin-top: 20px; }
+.scenario-section > p { color: #526173; }
+.scenario-section select, .scenario-edit input { border: 1px solid #b8c5d0; border-radius: 8px; padding: 7px; background: white; }
+.scenario-edit { display: grid; grid-template-columns: repeat(auto-fit,minmax(230px,1fr)); gap: 10px; margin: 16px 0; }
+.scenario-edit > div { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.scenario-edit > div > span:first-child { width: 100%; font-weight: 600; }
+.scenario-scroll { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 12px; padding: 16px 0; }
+.scenario-day { flex: 0 0 min(85%, 330px); scroll-snap-align: start; border: 1px solid #dce5eb; border-radius: 14px; padding: 14px; background: #f8fafb; }
+.scenario-day h3 { margin: 0 0 10px; }
+.scenario-day details { background: white; border: 1px solid #e0e7eb; border-radius: 10px; margin: 8px 0; padding: 10px; }
+.scenario-day summary { cursor: pointer; }
+.scenario-day summary strong, .scenario-day summary span { display: block; }
+.scenario-day summary span { color: #526173; margin-top: 4px; font-size: .9em; }
+.scenario-route { margin-top: 12px; font-size: .9em; overflow-wrap: anywhere; }
+.scenario-route > div { padding: 8px 0; }

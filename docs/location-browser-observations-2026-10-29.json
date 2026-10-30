@@ -1,0 +1,23 @@
+{
+  "observed_date": "2026-10-29",
+  "method": "Chrome direct navigation and visible JSON response inspection",
+  "limitations": "Browser inspection records response JSON, not HTTP headers/status. These are public endpoint observations, not end-to-end tests through the local application. Shell DNS and local backend port binding remain restricted.",
+  "photon": {
+    "url": "https://photon.komoot.io/api/?q=M%26S%20Woolwich&limit=3&lang=en&lat=51.49&lon=0.06",
+    "features": 3,
+    "observed_foodhall": {"name":"M&S Foodhall","address":"4 Victory Parade","postcode":"SE18 6FL","lat":51.4915794,"lon":0.070647,"osm_type":"N","osm_id":4795415648},
+    "note": "The other two results are railway features named Woolwich. The result is not proof that this is the employer's exact branch or employee entrance. Photon / © OpenStreetMap contributors. Raw public response is stored as the locations/photon-woolwich.json test fixture."
+  },
+  "tfl": {
+    "destination": "940GZZLUMGT",
+    "query": {"date":"20261030","time":"0900","timeIs":"Departing","calcOneDirection":"true"},
+    "cases": [
+      {"kind":"coordinate","from":"51.5178,-0.0823","response_type":"ItineraryResult","journeys":4},
+      {"kind":"postcode","from":"E1 6AN","response_type":"ItineraryResult","journeys":4},
+      {"kind":"naptan","from":"940GZZLULVT","response_type":"ItineraryResult","journeys":4},
+      {"kind":"ics","from":"1000138","response_type":"ItineraryResult","journeys":4},
+      {"kind":"free-text","from":"Liverpool Street","response_type":"DisambiguationResult","from_candidates":11,"observed_station_parameterValue":"1000138","observed_coordinate_parameterValue":"51.517235380799,-0.082063071473"}
+    ],
+    "note": "The five inputs represent different endpoints/precisions; route durations need not be equal. Free-text disambiguation is expected, not a failed format. No FareTo calls made."
+  }
+}

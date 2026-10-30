@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itdRequest version="10.6.30.10" language="de" lengthUnit="METER" sessionID="0" client="CommuteFit/1.0" clientIP="" serverID="" virtDir="api10" calcTime="27.747" now="2026-10-27T20:32:13" nowWD="3" logRequestId="efa081cc32333d6a">
+  <clientHeaderLines/>
+  <itdVersionInfo>
+    <ptKernel>
+      <appVersion>10.6.30.15 build 16.04.2026 00:23:45</appVersion>
+      <dataFormat>EFA10_06_01</dataFormat>
+      <dataBuild>2026-10-27T05:34:33</dataBuild>
+    </ptKernel>
+  </itdVersionInfo>
+  <itdStopStructureRequest requestID="0">
+    <stopStructure>
+      <stopAreaLinesSeq/>
+      <stopPoints/>
+      <footpathInfos/>
+    </stopStructure>
+  </itdStopStructureRequest>
+</itdRequest>

@@ -1,0 +1,391 @@
+[
+  {
+    "archiveRequest": "single-tube-sff-comparison-journey",
+    "date": "20261027",
+    "queryTime": "0900",
+    "timeIs": "Departing",
+    "startDateTime": "2026-10-27T09:01:00",
+    "durationMinutes": 8,
+    "legModes": [
+      "tube"
+    ],
+    "fare": {
+      "totalCost": 310,
+      "fares": [
+        {
+          "cost": 310,
+          "chargeLevel": "Peak",
+          "isHopperFare": false,
+          "lowZone": 1,
+          "highZone": 1,
+          "taps": [
+            {
+              "modeType": "Rail",
+              "tapTimestamp": "2026-10-27T09:01:00+00:00",
+              "busRouteId": null,
+              "nationalLocationCode": 732
+            },
+            {
+              "modeType": "Rail",
+              "tapTimestamp": "2026-10-27T09:09:00+00:00",
+              "busRouteId": null,
+              "nationalLocationCode": 511
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "archiveRequest": "multi-leg-tube-transfer-journey",
+    "date": "20261027",
+    "queryTime": "0900",
+    "timeIs": "Departing",
+    "startDateTime": "2026-10-27T09:01:00",
+    "durationMinutes": 11,
+    "legModes": [
+      "tube",
+      "tube"
+    ],
+    "fare": {
+      "totalCost": 310,
+      "fares": [
+        {
+          "cost": 310,
+          "chargeLevel": "Peak",
+          "isHopperFare": false,
+          "lowZone": 1,
+          "highZone": 1,
+          "taps": [
+            {
+              "modeType": "Rail",
+              "tapTimestamp": "2026-10-27T09:01:00+00:00",
+              "busRouteId": null,
+              "nationalLocationCode": 732
+            },
+            {
+              "modeType": "Rail",
+              "tapTimestamp": "2026-10-27T09:12:00+00:00",
+              "busRouteId": null,
+              "nationalLocationCode": 772
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "archiveRequest": "mixed-bus-and-tube-journey",
+    "date": "20261027",
+    "queryTime": "0900",
+    "timeIs": "Departing",
+    "startDateTime": "2026-10-27T09:07:00",
+    "durationMinutes": 22,
+    "legModes": [
+      "bus",
+      "tube",
+      "tube"
+    ],
+    "fare": {
+      "totalCost": 485,
+      "fares": [
+        {
+          "cost": 175,
+          "isHopperFare": false,
+          "lowZone": 0,
+          "highZone": 0,
+          "taps": [
+            {
+              "modeType": "Bus",
+              "tapTimestamp": "2026-10-27T09:07:00+00:00",
+              "busRouteId": "11",
+              "nationalLocationCode": 0
+            }
+          ]
+        },
+        {
+          "cost": 310,
+          "chargeLevel": "Peak",
+          "isHopperFare": false,
+          "lowZone": 1,
+          "highZone": 1,
+          "taps": [
+            {
+              "modeType": "Rail",
+              "tapTimestamp": "2026-10-27T09:18:00+00:00",
+              "busRouteId": null,
+              "nationalLocationCode": 722
+            },
+            {
+              "modeType": "Rail",
+              "tapTimestamp": "2026-10-27T09:29:00+00:00",
+              "busRouteId": null,
+              "nationalLocationCode": 511
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "archiveRequest": "consecutive-bus-hopper-journey",
+    "date": "20261027",
+    "queryTime": "0900",
+    "timeIs": "Departing",
+    "startDateTime": "2026-10-27T09:03:00",
+    "durationMinutes": 66,
+    "legModes": [
+      "walking",
+      "bus",
+      "bus"
+    ],
+    "fare": {
+      "totalCost": 175,
+      "fares": [
+        {
+          "cost": 175,
+          "isHopperFare": false,
+          "lowZone": 0,
+          "highZone": 0,
+          "taps": [
+            {
+              "modeType": "Bus",
+              "tapTimestamp": "2026-10-27T09:09:00+00:00",
+              "busRouteId": "15",
+              "nationalLocationCode": 0
+            }
+          ]
+        },
+        {
+          "cost": 0,
+          "isHopperFare": true,
+          "lowZone": 0,
+          "highZone": 0,
+          "taps": [
+            {
+              "modeType": "Bus",
+              "tapTimestamp": "2026-10-27T09:50:00+00:00",
+              "busRouteId": "135",
+              "nationalLocationCode": 0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "archiveRequest": "hammersmith-osi-journey",
+    "date": "20261027",
+    "queryTime": "0900",
+    "timeIs": "Departing",
+    "startDateTime": "2026-10-27T09:02:00",
+    "durationMinutes": 15,
+    "legModes": [
+      "tube",
+      "walking",
+      "tube"
+    ],
+    "fare": {
+      "totalCost": 230,
+      "fares": [
+        {
+          "cost": 230,
+          "chargeLevel": "Peak",
+          "isHopperFare": false,
+          "lowZone": 2,
+          "highZone": 2,
+          "taps": [
+            {
+              "modeType": "Rail",
+              "tapTimestamp": "2026-10-27T09:02:00+00:00",
+              "busRouteId": null,
+              "nationalLocationCode": 585
+            },
+            {
+              "modeType": "Rail",
+              "tapTimestamp": "2026-10-27T09:04:00+00:00",
+              "busRouteId": null,
+              "nationalLocationCode": 773
+            },
+            {
+              "modeType": "Rail",
+              "tapTimestamp": "2026-10-27T09:12:00+00:00",
+              "busRouteId": null,
+              "nationalLocationCode": 593
+            },
+            {
+              "modeType": "Rail",
+              "tapTimestamp": "2026-10-27T09:17:00+00:00",
+              "busRouteId": null,
+              "nationalLocationCode": 562
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "archiveRequest": "avoid-zone-one-via-highbury-journey",
+    "date": "20261027",
+    "queryTime": "0900",
+    "timeIs": "Departing",
+    "startDateTime": "2026-10-27T09:00:00",
+    "durationMinutes": 28,
+    "legModes": [
+      "tube",
+      "overground"
+    ],
+    "fare": {
+      "totalCost": 230,
+      "fares": [
+        {
+          "cost": 230,
+          "chargeLevel": "Peak",
+          "isHopperFare": false,
+          "lowZone": 2,
+          "highZone": 2,
+          "taps": [
+            {
+              "modeType": "Rail",
+              "tapTimestamp": "2026-10-27T09:00:00+00:00",
+              "busRouteId": null,
+              "nationalLocationCode": 580
+            },
+            {
+              "modeType": "Rail",
+              "tapTimestamp": "2026-10-27T09:03:00+00:00",
+              "busRouteId": null,
+              "nationalLocationCode": 603
+            },
+            {
+              "modeType": "Rail",
+              "tapTimestamp": "2026-10-27T09:28:00+00:00",
+              "busRouteId": null,
+              "nationalLocationCode": 719
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "archiveRequest": "national-rail-fare-coverage-journey",
+    "date": "20261027",
+    "queryTime": "0900",
+    "timeIs": "Departing",
+    "startDateTime": "2026-10-27T09:00:00",
+    "durationMinutes": 12,
+    "legModes": [
+      "national-rail",
+      "elizabeth-line"
+    ],
+    "fare": null
+  },
+  {
+    "archiveRequest": "weekend-early-shift-arrival-journey-1",
+    "date": "20261031",
+    "queryTime": "0230",
+    "timeIs": "Arriving",
+    "startDateTime": "2026-10-31T01:15:00",
+    "durationMinutes": 47,
+    "legModes": [
+      "walking",
+      "bus"
+    ],
+    "fare": {
+      "totalCost": 175,
+      "fares": [
+        {
+          "cost": 175,
+          "isHopperFare": false,
+          "lowZone": 0,
+          "highZone": 0,
+          "taps": [
+            {
+              "modeType": "Bus",
+              "tapTimestamp": "2026-10-31T01:21:00+00:00",
+              "busRouteId": "n550",
+              "nationalLocationCode": 0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "archiveRequest": "weekend-early-shift-arrival-journey-2",
+    "date": "20261101",
+    "queryTime": "0230",
+    "timeIs": "Arriving",
+    "startDateTime": "2026-11-01T01:15:00",
+    "durationMinutes": 48,
+    "legModes": [
+      "walking",
+      "bus"
+    ],
+    "fare": {
+      "totalCost": 175,
+      "fares": [
+        {
+          "cost": 175,
+          "isHopperFare": false,
+          "lowZone": 0,
+          "highZone": 0,
+          "taps": [
+            {
+              "modeType": "Bus",
+              "tapTimestamp": "2026-11-01T01:21:00+00:00",
+              "busRouteId": "n550",
+              "nationalLocationCode": 0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "archiveRequest": "weekend-late-shift-return-journey-2",
+    "date": "20261101",
+    "queryTime": "2300",
+    "timeIs": "Departing",
+    "startDateTime": "2026-11-01T23:12:00",
+    "durationMinutes": 42,
+    "legModes": [
+      "bus",
+      "bus"
+    ],
+    "fare": {
+      "totalCost": 185,
+      "fares": [
+        {
+          "cost": 185,
+          "isHopperFare": false,
+          "lowZone": 0,
+          "highZone": 0,
+          "taps": [
+            {
+              "modeType": "Bus",
+              "tapTimestamp": "2026-11-01T23:12:00+00:00",
+              "busRouteId": "135",
+              "nationalLocationCode": 0
+            }
+          ]
+        },
+        {
+          "cost": 0,
+          "isHopperFare": true,
+          "lowZone": 0,
+          "highZone": 0,
+          "taps": [
+            {
+              "modeType": "Bus",
+              "tapTimestamp": "2026-11-01T23:38:00+00:00",
+              "busRouteId": "26",
+              "nationalLocationCode": 0
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

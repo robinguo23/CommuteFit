@@ -1,0 +1,31 @@
+#!/bin/sh
+set -eu
+
+WRAPPER_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+PROPERTIES="$WRAPPER_DIR/.mvn/wrapper/maven-wrapper.properties"
+MAVEN_VERSION=$(sed -n 's/^distributionUrl=.*apache-maven-\([0-9.]*\)-bin\.zip$/\1/p' "$PROPERTIES")
+if [ -z "$MAVEN_VERSION" ]; then
+  echo "Could not read Maven distributionUrl from $PROPERTIES" >&2
+  exit 1
+fi
+
+if [ -n "${MAVEN_HOME:-}" ] && [ -x "$MAVEN_HOME/bin/mvn" ]; then
+  exec "$MAVEN_HOME/bin/mvn" "$@"
+fi
+
+TASK_MAVEN_CACHE="${MAVEN_USER_HOME:-${HOME:-}/.m2}/wrapper/dists/apache-maven-$MAVEN_VERSION"
+if [ -d "$TASK_MAVEN_CACHE" ]; then
+  TASK_MAVEN_BIN=$(find "$TASK_MAVEN_CACHE" -type f -path '*/bin/mvn' -print -quit)
+  if [ -n "$TASK_MAVEN_BIN" ]; then exec "$TASK_MAVEN_BIN" "$@"; fi
+fi
+
+TASK_MAVEN_INSTALL="$TASK_MAVEN_CACHE/commute-fit"
+TASK_MAVEN_ZIP="${TMPDIR:-/tmp}/apache-maven-$MAVEN_VERSION-commute-fit.zip"
+mkdir -p "$TASK_MAVEN_INSTALL"
+curl --fail --location --silent --show-error \
+  "https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/$MAVEN_VERSION/apache-maven-$MAVEN_VERSION-bin.zip" \
+  --output "$TASK_MAVEN_ZIP"
+unzip -oq "$TASK_MAVEN_ZIP" -d "$TASK_MAVEN_INSTALL"
+rm -f "$TASK_MAVEN_ZIP"
+TASK_MAVEN_BIN="$TASK_MAVEN_INSTALL/apache-maven-$MAVEN_VERSION/bin/mvn"
+exec "$TASK_MAVEN_BIN" "$@"

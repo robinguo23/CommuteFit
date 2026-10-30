@@ -1,0 +1,350 @@
+{
+  "meta": {
+    "captured_at": "2026-10-30T00:10:51",
+    "backend": "127.0.0.1:8080",
+    "provider_family": [
+      "geoapify",
+      "arcgis",
+      "tomtom"
+    ],
+    "limit_meters": 965.6064,
+    "commit_sha": "not-a-git-repo",
+    "note": "Regression Baseline v1; do not modify search algorithm before comparing."
+  },
+  "runs": {
+    "B&M Woolwich": {
+      "status": "supported",
+      "areas": [
+        {
+          "support": 2,
+          "sources": [
+            "ArcGIS",
+            "TomTom"
+          ],
+          "maxDistanceMeters": 12.2,
+          "representative": {
+            "name": "B&M",
+            "postcode": "SE7 7RJ",
+            "lat": 51.489891,
+            "lon": 0.0349561
+          }
+        }
+      ],
+      "selected": {
+        "id": "a5e89702-4154-42e7-b7ea-0f4127bf31ac",
+        "name": "B&M",
+        "address": "601 Woolwich Road, Woolwich Riverside, Charlton, Greenwich, London, England, SE7 7RJ",
+        "postcode": "SE7 7RJ",
+        "lat": 51.489891,
+        "lon": 0.0349561,
+        "precision": "venue",
+        "source": "ArcGIS",
+        "sourceId": "AQ1CvwIAsSgCAJUBBIXP6fsOA0IgTWYDRU5H",
+        "selectable": true
+      },
+      "provider_counts": {
+        "geoapify": 8,
+        "arcgis": 4,
+        "tomtom": 8
+      },
+      "excluded_count": 17,
+      "excluded_reasons": [
+        "名称或区域未覆盖查询关键词，保留在原始结果中供确认",
+        "仅区域／街道结果，或候选不可选择，不能用作门店共识票"
+      ]
+    },
+    "B and M Woolwich": {
+      "status": "supported",
+      "areas": [
+        {
+          "support": 2,
+          "sources": [
+            "ArcGIS",
+            "TomTom"
+          ],
+          "maxDistanceMeters": 12.2,
+          "representative": {
+            "name": "B&M",
+            "postcode": "SE7 7RJ",
+            "lat": 51.489891,
+            "lon": 0.0349561
+          }
+        }
+      ],
+      "selected": {
+        "id": "e2e902aa-6c49-45c4-8774-6fe9125e956f",
+        "name": "B&M",
+        "address": "601 Woolwich Road, Woolwich Riverside, Charlton, Greenwich, London, England, SE7 7RJ",
+        "postcode": "SE7 7RJ",
+        "lat": 51.489891,
+        "lon": 0.0349561,
+        "precision": "venue",
+        "source": "ArcGIS",
+        "sourceId": "AQ1CvwIAsSgCAJUBBIXP6fsOA0IgTWYDRU5H",
+        "selectable": true
+      },
+      "provider_counts": {
+        "geoapify": 8,
+        "arcgis": 1,
+        "tomtom": 8
+      },
+      "excluded_count": 14,
+      "excluded_reasons": [
+        "名称或区域未覆盖查询关键词，保留在原始结果中供确认",
+        "仅区域／街道结果，或候选不可选择，不能用作门店共识票"
+      ]
+    },
+    "H&M Oxford Street": {
+      "status": "ambiguous",
+      "areas": [
+        {
+          "support": 3,
+          "sources": [
+            "ArcGIS",
+            "Geoapify",
+            "TomTom"
+          ],
+          "maxDistanceMeters": 46.8,
+          "representative": {
+            "name": "H&M",
+            "postcode": "SA1 3AE",
+            "lat": 51.620139,
+            "lon": -3.943326
+          }
+        },
+        {
+          "support": 3,
+          "sources": [
+            "ArcGIS",
+            "Geoapify",
+            "TomTom"
+          ],
+          "maxDistanceMeters": 591.4,
+          "representative": {
+            "name": "H&M",
+            "postcode": "W1D 1NT",
+            "lat": 51.515748,
+            "lon": -0.139092
+          }
+        }
+      ],
+      "selected": null,
+      "provider_counts": {
+        "geoapify": 8,
+        "arcgis": 7,
+        "tomtom": 8
+      },
+      "excluded_count": 22,
+      "excluded_reasons": [
+        "单个远处候选未获其他来源支持，不参与主要区域判断",
+        "名称或区域未覆盖查询关键词，保留在原始结果中供确认",
+        "地址文字有重合，但匹配候选分布在不同区域；不能据此自动选择分店",
+        "另有多个来源支持相距超过 0.6 英里的门店区域；需要更具体地址来区分"
+      ]
+    },
+    "H and M Oxford Street": {
+      "status": "ambiguous",
+      "areas": [
+        {
+          "support": 3,
+          "sources": [
+            "ArcGIS",
+            "Geoapify",
+            "TomTom"
+          ],
+          "maxDistanceMeters": 2.1,
+          "representative": {
+            "name": "H&M",
+            "postcode": "W1D 1NN",
+            "lat": 51.5157477,
+            "lon": -0.1390915
+          }
+        },
+        {
+          "support": 3,
+          "sources": [
+            "ArcGIS",
+            "Geoapify",
+            "TomTom"
+          ],
+          "maxDistanceMeters": 17.4,
+          "representative": {
+            "name": "H&M",
+            "postcode": "SA1 3AE",
+            "lat": 51.620139,
+            "lon": -3.943326
+          }
+        }
+      ],
+      "selected": null,
+      "provider_counts": {
+        "geoapify": 2,
+        "arcgis": 3,
+        "tomtom": 8
+      },
+      "excluded_count": 10,
+      "excluded_reasons": [
+        "单个远处候选未获其他来源支持，不参与主要区域判断",
+        "名称或区域未覆盖查询关键词，保留在原始结果中供确认",
+        "另有多个来源支持相距超过 0.6 英里的门店区域；需要更具体地址来区分"
+      ]
+    },
+    "Sainsbury's Woolwich": {
+      "status": "supported",
+      "areas": [
+        {
+          "support": 3,
+          "sources": [
+            "ArcGIS",
+            "Geoapify",
+            "TomTom"
+          ],
+          "maxDistanceMeters": 566.2,
+          "representative": {
+            "name": "Sainsbury's",
+            "postcode": "SE18 6QW",
+            "lat": 51.491,
+            "lon": 0.0637
+          }
+        },
+        {
+          "support": 3,
+          "sources": [
+            "ArcGIS",
+            "Geoapify",
+            "TomTom"
+          ],
+          "maxDistanceMeters": 931.1,
+          "representative": {
+            "name": "Sainsbury's",
+            "postcode": "SE18 6QW",
+            "lat": 51.491,
+            "lon": 0.0637
+          }
+        }
+      ],
+      "selected": {
+        "id": "3fb203b8-1d0d-4652-a30a-1ee294e3dbf7",
+        "name": "Sainsbury's",
+        "address": "25 Calderwood Street, Woolwich Riverside, Woolwich, Greenwich, London, England, SE18 6QW",
+        "postcode": "SE18 6QW",
+        "lat": 51.491,
+        "lon": 0.0637,
+        "precision": "venue",
+        "source": "ArcGIS",
+        "sourceId": "AQ1fvwIAsigCAJUBBIXP6fsOC1NBSU5TQlVSWSBTZgNFTkc",
+        "selectable": true
+      },
+      "provider_counts": {
+        "geoapify": 3,
+        "arcgis": 1,
+        "tomtom": 4
+      },
+      "excluded_count": 3,
+      "excluded_reasons": [
+        "名称或区域未覆盖查询关键词，保留在原始结果中供确认"
+      ]
+    },
+    "Sainsburys Woolwich": {
+      "status": "supported",
+      "areas": [
+        {
+          "support": 3,
+          "sources": [
+            "ArcGIS",
+            "Geoapify",
+            "TomTom"
+          ],
+          "maxDistanceMeters": 575.4,
+          "representative": {
+            "name": "Sainsbury's",
+            "postcode": "SE18 6QW",
+            "lat": 51.491,
+            "lon": 0.0637
+          }
+        }
+      ],
+      "selected": {
+        "id": "3b091452-7b3b-4d20-aa41-74175a56c2c8",
+        "name": "Sainsbury's",
+        "address": "25 Calderwood Street, Woolwich Riverside, Woolwich, Greenwich, London, England, SE18 6QW",
+        "postcode": "SE18 6QW",
+        "lat": 51.491,
+        "lon": 0.0637,
+        "precision": "venue",
+        "source": "ArcGIS",
+        "sourceId": "AQ1fvwIAsigCAJUBBIXP6fsOC1NBSU5TQlVSWSBTZgNFTkc",
+        "selectable": true
+      },
+      "provider_counts": {
+        "geoapify": 8,
+        "arcgis": 2,
+        "tomtom": 4
+      },
+      "excluded_count": 9,
+      "excluded_reasons": [
+        "单个远处候选未获其他来源支持，不参与主要区域判断",
+        "名称或区域未覆盖查询关键词，保留在原始结果中供确认"
+      ]
+    },
+    "Co-op Greenwich": {
+      "status": "ambiguous",
+      "areas": [],
+      "selected": null,
+      "provider_counts": {
+        "geoapify": 8,
+        "arcgis": 1,
+        "tomtom": 6
+      },
+      "excluded_count": 15,
+      "excluded_reasons": [
+        "名称或区域未覆盖查询关键词，保留在原始结果中供确认",
+        "地址文字有重合，但匹配候选分布在不同区域；不能据此自动选择分店"
+      ]
+    },
+    "Coop Greenwich": {
+      "status": "needs-confirmation",
+      "areas": [],
+      "selected": null,
+      "provider_counts": {
+        "geoapify": 8,
+        "arcgis": 2,
+        "tomtom": 6
+      },
+      "excluded_count": 16,
+      "excluded_reasons": [
+        "名称或区域未覆盖查询关键词，保留在原始结果中供确认"
+      ]
+    },
+    "B&Q Charlton": {
+      "status": "needs-confirmation",
+      "areas": [],
+      "selected": null,
+      "provider_counts": {
+        "geoapify": 8,
+        "arcgis": 8,
+        "tomtom": 8
+      },
+      "excluded_count": 24,
+      "excluded_reasons": [
+        "名称或区域未覆盖查询关键词，保留在原始结果中供确认",
+        "仅区域／街道结果，或候选不可选择，不能用作门店共识票"
+      ]
+    },
+    "B and Q Charlton": {
+      "status": "needs-confirmation",
+      "areas": [],
+      "selected": null,
+      "provider_counts": {
+        "geoapify": 8,
+        "arcgis": 8,
+        "tomtom": 8
+      },
+      "excluded_count": 24,
+      "excluded_reasons": [
+        "名称或区域未覆盖查询关键词，保留在原始结果中供确认",
+        "仅区域／街道结果，或候选不可选择，不能用作门店共识票"
+      ]
+    }
+  }
+}

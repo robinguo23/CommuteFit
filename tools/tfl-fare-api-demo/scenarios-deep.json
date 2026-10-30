@@ -1,0 +1,169 @@
+{
+  "date": "20261027",
+  "time": "0900",
+  "scenarios": [
+    {
+      "name": "single-tube-sff-comparison",
+      "purpose": "Compare Journey Planner's whole single-journey fare with FareTo for the same Tube station pair. Inspect raw values, ticket types, peak/off-peak fields, caveats and fare validity dates.",
+      "journey": {
+        "from": "940GZZLUCHX",
+        "to": "940GZZLUBST",
+        "modes": ["tube"]
+      },
+      "fareTo": [
+        {
+          "from": "940GZZLUCHX",
+          "to": "940GZZLUBST",
+          "purpose": "Same station-pair FareTo comparison; do not infer universal equality from one match."
+        }
+      ]
+    },
+    {
+      "name": "multi-leg-tube-transfer",
+      "purpose": "Check that a route with an in-station Tube transfer can have multiple vehicle legs but one fare object. Compare a full pair query and inspect leg count separately from fare count.",
+      "journey": {
+        "from": "940GZZLUCHX",
+        "to": "940GZZLUKSX",
+        "modes": ["tube"]
+      },
+      "fareTo": [
+        {
+          "from": "940GZZLUCHX",
+          "to": "940GZZLUKSX",
+          "purpose": "Whole Tube station-pair FareTo reference, not a quote for each leg."
+        }
+      ]
+    },
+    {
+      "name": "mixed-bus-and-tube",
+      "purpose": "Inspect a bus-plus-Tube itinerary. Compare Journey Planner's full-route fare with FareTo for the Tube station pair only. Do not add the two quotes unless the response proves their scopes are disjoint.",
+      "journey": {
+        "from": "Victoria Coach Station, London",
+        "to": "Baker Street Underground Station",
+        "modes": ["bus", "tube"]
+      },
+      "fareTo": [
+        {
+          "from": "940GZZLUVIC",
+          "to": "940GZZLUBST",
+          "purpose": "Tube station-pair reference within a mixed-mode journey; not the whole journey price."
+        }
+      ]
+    },
+    {
+      "name": "consecutive-bus-hopper",
+      "purpose": "Resolved stop IDs for a bus-only route that previously returned multiple bus legs. Inspect Journey Planner totalCost, each fare object, isHopperFare, busRouteId and tap timestamps. Fare components are not vehicle legs.",
+      "journey": {
+        "from": "490G000803",
+        "to": "490000038F",
+        "modes": ["bus"]
+      },
+      "fareTo": [
+        {
+          "from": "490G000803",
+          "to": "490000038F",
+          "purpose": "Probe FareTo with bus-stop IDs. An empty response means no FareTo quote was returned; it is not a zero fare."
+        }
+      ]
+    },
+    {
+      "name": "hammersmith-osi",
+      "purpose": "Use the resolved Hammersmith interchange ID. Confirm a Tube leg to Hammersmith H&C, a walking interchange to the District/Piccadilly station, a second Tube leg and the returned fare. Planner legs do not simulate card validation.",
+      "journey": {
+        "from": "940GZZLUGHK",
+        "to": "940GZZLUECT",
+        "via": "1000097",
+        "modes": ["tube"]
+      },
+      "fareTo": [
+        {
+          "from": "940GZZLUGHK",
+          "to": "940GZZLUECT",
+          "purpose": "Whole station-pair reference across the Hammersmith OSI."
+        }
+      ]
+    },
+    {
+      "name": "avoid-zone-one-via-highbury",
+      "purpose": "Compare FareTo default/alternative fare rows with a Journey Planner route constrained via Highbury & Islington. Check that the route actually uses the intended interchange and that the fare taps reflect it. The API does not prove a rider touched a pink reader.",
+      "journey": {
+        "from": "940GZZLUFPK",
+        "to": "940GZZLUSTD",
+        "via": "940GZZLUHAI",
+        "modes": ["tube", "overground"]
+      },
+      "fareTo": [
+        {
+          "from": "940GZZLUFPK",
+          "to": "940GZZLUSTD",
+          "purpose": "Whole station-pair FareTo query; inspect all route rows and pink-reader conditions."
+        }
+      ]
+    },
+    {
+      "name": "national-rail-fare-coverage",
+      "purpose": "Test a National Rail plus Elizabeth line route and check whether Journey Planner returns fare data. Compare with the Tube-only FareTo endpoint; an empty FareTo array or missing Journey Planner fare must be represented as unknown, never zero.",
+      "journey": {
+        "from": "910GSTPX",
+        "to": "910GLIVST",
+        "modes": ["national-rail", "elizabeth-line", "tube"]
+      },
+      "fareTo": [
+        {
+          "from": "910GSTPX",
+          "to": "910GLIVST",
+          "purpose": "Probe FareTo support for a National Rail station pair; do not infer support from HTTP 200 alone."
+        }
+      ]
+    },
+    {
+      "name": "weekday-peak-boundaries",
+      "purpose": "Compare requested times around published weekday fare boundaries. Judge fare classification against actual fare tap timestamps in returned JSON, not only the requested query time.",
+      "journeys": [
+        {"from": "940GZZLUCHX", "to": "940GZZLUBST", "date": "20261027", "time": "06:29", "modes": ["tube"], "purpose": "One minute before the morning peak boundary; inspect actual first tap time."},
+        {"from": "940GZZLUCHX", "to": "940GZZLUBST", "date": "20261027", "time": "06:30", "modes": ["tube"], "purpose": "At the morning peak boundary; inspect actual first tap time."},
+        {"from": "940GZZLUCHX", "to": "940GZZLUBST", "date": "20261027", "time": "09:29", "modes": ["tube"], "purpose": "One minute before the morning peak ends; inspect actual first tap time."},
+        {"from": "940GZZLUCHX", "to": "940GZZLUBST", "date": "20261027", "time": "09:30", "modes": ["tube"], "purpose": "At the morning peak end; inspect actual first tap time."},
+        {"from": "940GZZLUCHX", "to": "940GZZLUBST", "date": "20261027", "time": "15:59", "modes": ["tube"], "purpose": "One minute before the afternoon peak boundary; inspect actual first tap time."},
+        {"from": "940GZZLUCHX", "to": "940GZZLUBST", "date": "20261027", "time": "16:00", "modes": ["tube"], "purpose": "At the afternoon peak boundary; inspect actual first tap time."},
+        {"from": "940GZZLUCHX", "to": "940GZZLUBST", "date": "20261027", "time": "18:59", "modes": ["tube"], "purpose": "One minute before the afternoon peak ends; inspect actual first tap time."},
+        {"from": "940GZZLUCHX", "to": "940GZZLUBST", "date": "20261027", "time": "19:00", "modes": ["tube"], "purpose": "At the afternoon peak end; inspect actual first tap time."}
+      ],
+      "fareTo": []
+    },
+    {
+      "name": "weekend-early-shift-arrival",
+      "purpose": "Model a job shift requiring arrival by 02:30 on Saturday and Sunday. Compare arrive-by planner results and depart-at 02:30 results; capture night bus routes, walking transfers, route times and fare components.",
+      "journeys": [
+        {"from": "490G000803", "to": "490000038F", "date": "20261031", "time": "02:30", "timeIs": "Arriving", "modes": ["bus"], "purpose": "Saturday, arrive by 02:30 (e.g. a 03:00 shift with 30-minute buffer)."},
+        {"from": "490G000803", "to": "490000038F", "date": "20261101", "time": "02:30", "timeIs": "Arriving", "modes": ["bus"], "purpose": "Sunday, arrive by 02:30 (e.g. a 03:00 shift with 30-minute buffer)."},
+        {"from": "490G000803", "to": "490000038F", "date": "20261031", "time": "02:30", "timeIs": "Departing", "modes": ["bus"], "purpose": "Saturday, leave at or after 02:30; compare service availability."},
+        {"from": "490G000803", "to": "490000038F", "date": "20261101", "time": "02:30", "timeIs": "Departing", "modes": ["bus"], "purpose": "Sunday, leave at or after 02:30; compare service availability."}
+      ],
+      "fareTo": []
+    },
+    {
+      "name": "weekend-late-shift-return",
+      "purpose": "Check the return direction after a late Saturday or Sunday shift. Query the actual return departure date/time; do not reuse the outbound route or fare.",
+      "journeys": [
+        {"from": "490000038F", "to": "490G000803", "date": "20261031", "time": "23:00", "timeIs": "Departing", "modes": ["bus"], "purpose": "Saturday late return, departing Canary Wharf at 23:00."},
+        {"from": "490000038F", "to": "490G000803", "date": "20261101", "time": "23:00", "timeIs": "Departing", "modes": ["bus"], "purpose": "Sunday late return, departing Canary Wharf at 23:00."},
+        {"from": "490000038F", "to": "490G000803", "date": "20261102", "time": "00:30", "timeIs": "Departing", "modes": ["bus"], "purpose": "After-midnight return following a Sunday shift; confirm which calendar date the query must use."}
+      ],
+      "fareTo": []
+    },
+    {
+      "name": "daylight-saving-overlap",
+      "purpose": "The UK clocks go back on this Sunday. Query the repeated local 01:30 and inspect whether Journey Planner results/tap timestamps identify an offset or select one occurrence. Record ambiguity as a limitation if the API cannot distinguish both local times.",
+      "journey": {
+        "from": "490G000803",
+        "to": "490000038F",
+        "date": "20261101",
+        "time": "01:30",
+        "timeIs": "Departing",
+        "modes": ["bus"]
+      },
+      "fareTo": []
+    }
+  ]
+}

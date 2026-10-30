@@ -1,0 +1,54 @@
+server:
+  address: 127.0.0.1
+  port: ${SERVER_PORT:8080}
+  error:
+    include-message: never
+    include-stacktrace: never
+
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration
+      - org.springframework.boot.flyway.autoconfigure.FlywayAutoConfiguration
+  application:
+    name: commute-fit
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://127.0.0.1:5433/commute_fit}
+    username: ${SPRING_DATASOURCE_USERNAME:commute_fit}
+    password: ${SPRING_DATASOURCE_PASSWORD:}
+    hikari:
+      connection-timeout: 3000
+      initialization-fail-timeout: 1
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    clean-disabled: true
+  jackson:
+    default-property-inclusion: non_null
+
+commute-fit:
+  geocoding:
+    photon-url: ${PHOTON_BASE_URL:https://photon.komoot.io}
+    geoapify-url: ${GEOAPIFY_BASE_URL:https://api.geoapify.com}
+    geoapify-key: ${GEOAPIFY_API_KEY:}
+    maptiler-url: ${MAPTILER_BASE_URL:https://api.maptiler.com}
+    maptiler-key: ${MAPTILER_API_KEY:}
+    locationiq-url: ${LOCATIONIQ_BASE_URL:https://eu1.locationiq.com}
+    locationiq-key: ${LOCATIONIQ_API_KEY:}
+    opencage-url: ${OPENCAGE_BASE_URL:https://api.opencagedata.com}
+    opencage-key: ${OPENCAGE_API_KEY:}
+    tomtom-url: ${TOMTOM_BASE_URL:https://api.tomtom.com}
+    tomtom-key: ${TOMTOM_API_KEY:}
+    foursquare-key: ${FOURSQUARE_API_KEY:}
+  tfl:
+    base-url: https://api.tfl.gov.uk
+    app-key: ${TFL_APP_KEY:}
+    connect-timeout: 4s
+    read-timeout: 12s
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: WARN
+    org.springframework.jdbc: WARN
+    org.flywaydb: INFO

@@ -1,0 +1,46 @@
+{
+  "observed_at": "2026-10-29T10:50:22.478007+00:00",
+  "note": "Live observation, not a guarantee of coverage or equivalent endpoints.",
+  "cases": [
+    {
+      "kind": "coordinate",
+      "from": "51.5178,-0.0823",
+      "to": "940GZZLUMGT",
+      "date": "20261030",
+      "time": "0900",
+      "outcome": "network-unavailable"
+    },
+    {
+      "kind": "postcode",
+      "from": "E1 6AN",
+      "to": "940GZZLUMGT",
+      "date": "20261030",
+      "time": "0900",
+      "outcome": "network-unavailable"
+    },
+    {
+      "kind": "naptan",
+      "from": "940GZZLULVT",
+      "to": "940GZZLUMGT",
+      "date": "20261030",
+      "time": "0900",
+      "outcome": "network-unavailable"
+    },
+    {
+      "kind": "ics",
+      "from": "1000138",
+      "to": "940GZZLUMGT",
+      "date": "20261030",
+      "time": "0900",
+      "outcome": "network-unavailable"
+    },
+    {
+      "kind": "free-text",
+      "from": "Liverpool Street",
+      "to": "940GZZLUMGT",
+      "date": "20261030",
+      "time": "0900",
+      "outcome": "network-unavailable"
+    }
+  ]
+}

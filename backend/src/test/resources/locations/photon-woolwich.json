@@ -1,0 +1,8 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {"type":"Feature","properties":{"osm_type":"N","osm_id":5723419669,"osm_key":"railway","osm_value":"stop","type":"house","name":"Woolwich","street":"Major Draper Street","locality":"Royal Arsenal Riverside","district":"Plumstead","city":"Royal Borough of Greenwich","county":"Greater London","state":"England","country":"United Kingdom","postcode":"SE18 6ZF","countrycode":"GB"},"geometry":{"type":"Point","coordinates":[0.0703949,51.4919328]}},
+    {"type":"Feature","properties":{"osm_type":"N","osm_id":4422624749,"osm_key":"railway","osm_value":"station","type":"house","name":"Woolwich","street":"Major Draper Street","locality":"Royal Arsenal Riverside","district":"Plumstead","city":"Royal Borough of Greenwich","county":"Greater London","state":"England","country":"United Kingdom","postcode":"SE18 6ZF","countrycode":"GB"},"geometry":{"type":"Point","coordinates":[0.070615,51.491954]}},
+    {"type":"Feature","properties":{"osm_type":"N","osm_id":4795415648,"osm_key":"shop","osm_value":"supermarket","type":"house","housenumber":"4","name":"M&S Foodhall","street":"Victory Parade","locality":"Callis Yard","district":"Woolwich","city":"Royal Borough of Greenwich","county":"Greater London","state":"England","country":"United Kingdom","postcode":"SE18 6FL","countrycode":"GB"},"geometry":{"type":"Point","coordinates":[0.070647,51.4915794]}}
+  ]
+}

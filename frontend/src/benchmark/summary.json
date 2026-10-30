@@ -1,0 +1,194 @@
+{
+  "toleranceMetres": 965.6064,
+  "referenceMethod": "Official job/store postcode centroid, historical postcode where labelled; J36 terminal-level Google Maps reference replaces unsuitable airport postcode centroid. Measures vicinity, not branch identity or access.",
+  "rules": {
+    "raw-title-location": {
+      "executed": 50,
+      "no-consensus": 50,
+      "perBrand": {
+        "Marks & Spencer": {
+          "no-consensus": 10
+        },
+        "Tesco": {
+          "no-consensus": 10
+        },
+        "Sainsbury's": {
+          "no-consensus": 10
+        },
+        "Boots": {
+          "no-consensus": 8
+        },
+        "Greggs": {
+          "no-consensus": 8
+        },
+        "Lidl": {
+          "no-consensus": 2
+        },
+        "Co-op": {
+          "no-consensus": 2
+        }
+      },
+      "providers": {
+        "locationiq": {
+          "anyWithinArea": 9,
+          "firstWithinArea": 7
+        },
+        "arcgis": {
+          "anyWithinArea": 12,
+          "firstWithinArea": 7
+        },
+        "tomtom": {
+          "anyWithinArea": 0,
+          "firstWithinArea": 0
+        }
+      }
+    },
+    "brand-area": {
+      "executed": 50,
+      "no-consensus": 20,
+      "within-area": 27,
+      "outside-area": 3,
+      "perBrand": {
+        "Marks & Spencer": {
+          "no-consensus": 3,
+          "within-area": 7
+        },
+        "Tesco": {
+          "no-consensus": 5,
+          "within-area": 4,
+          "outside-area": 1
+        },
+        "Sainsbury's": {
+          "no-consensus": 2,
+          "within-area": 6,
+          "outside-area": 2
+        },
+        "Boots": {
+          "within-area": 3,
+          "no-consensus": 5
+        },
+        "Greggs": {
+          "no-consensus": 3,
+          "within-area": 5
+        },
+        "Lidl": {
+          "no-consensus": 2
+        },
+        "Co-op": {
+          "within-area": 2
+        }
+      },
+      "providers": {
+        "locationiq": {
+          "anyWithinArea": 33,
+          "firstWithinArea": 29
+        },
+        "arcgis": {
+          "anyWithinArea": 38,
+          "firstWithinArea": 32
+        },
+        "tomtom": {
+          "anyWithinArea": 38,
+          "firstWithinArea": 34
+        }
+      }
+    },
+    "brand-store-city": {
+      "executed": 50,
+      "no-consensus": 27,
+      "within-area": 23,
+      "perBrand": {
+        "Marks & Spencer": {
+          "no-consensus": 3,
+          "within-area": 7
+        },
+        "Tesco": {
+          "no-consensus": 10
+        },
+        "Sainsbury's": {
+          "no-consensus": 3,
+          "within-area": 7
+        },
+        "Boots": {
+          "within-area": 3,
+          "no-consensus": 5
+        },
+        "Greggs": {
+          "no-consensus": 3,
+          "within-area": 5
+        },
+        "Lidl": {
+          "no-consensus": 2
+        },
+        "Co-op": {
+          "no-consensus": 1,
+          "within-area": 1
+        }
+      },
+      "providers": {
+        "locationiq": {
+          "anyWithinArea": 30,
+          "firstWithinArea": 27
+        },
+        "arcgis": {
+          "anyWithinArea": 41,
+          "firstWithinArea": 32
+        },
+        "tomtom": {
+          "anyWithinArea": 37,
+          "firstWithinArea": 35
+        }
+      }
+    },
+    "brand-area-city": {
+      "executed": 50,
+      "no-consensus": 22,
+      "within-area": 27,
+      "outside-area": 1,
+      "perBrand": {
+        "Marks & Spencer": {
+          "no-consensus": 3,
+          "within-area": 7
+        },
+        "Tesco": {
+          "no-consensus": 6,
+          "within-area": 4
+        },
+        "Sainsbury's": {
+          "no-consensus": 2,
+          "within-area": 7,
+          "outside-area": 1
+        },
+        "Boots": {
+          "within-area": 3,
+          "no-consensus": 5
+        },
+        "Greggs": {
+          "no-consensus": 3,
+          "within-area": 5
+        },
+        "Lidl": {
+          "no-consensus": 2
+        },
+        "Co-op": {
+          "no-consensus": 1,
+          "within-area": 1
+        }
+      },
+      "providers": {
+        "locationiq": {
+          "anyWithinArea": 36,
+          "firstWithinArea": 34
+        },
+        "arcgis": {
+          "anyWithinArea": 41,
+          "firstWithinArea": 35
+        },
+        "tomtom": {
+          "anyWithinArea": 38,
+          "firstWithinArea": 35
+        }
+      }
+    }
+  }
+}

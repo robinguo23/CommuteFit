@@ -1,0 +1,131 @@
+{
+  "date": "20261027",
+  "time": "0900",
+  "scenarios": [
+    {
+      "name": "tube-transfer",
+      "purpose": "Check a whole multi-leg Tube route; this example pair must be confirmed to yield a transfer in returned legs.",
+      "journey": {
+        "from": "940GZZLUCHX",
+        "to": "940GZZLUKSX",
+        "modes": ["tube"]
+      },
+      "fareTo": [
+        {
+          "from": "940GZZLUCHX",
+          "to": "940GZZLUKSX",
+          "purpose": "Whole station-pair FareTo reference, not per-leg fare"
+        }
+      ]
+    },
+    {
+      "name": "bus-plus-tube",
+      "purpose": "Mixed-mode case observed to include bus and Tube. FareTo checks only the Tube station pair, not the whole multimodal fare.",
+      "journey": {
+        "from": "Victoria Coach Station, London",
+        "to": "Baker Street Underground Station",
+        "modes": ["bus", "tube"]
+      },
+      "fareTo": [
+        {
+          "from": "940GZZLUVIC",
+          "to": "940GZZLUBST",
+          "purpose": "Cross-check the Tube component only; never add this to the whole Journey Planner fare without confirming the scope"
+        }
+      ]
+    },
+    {
+      "name": "consecutive-bus",
+      "purpose": "Candidate bus-only case; verify the returned route has multiple bus legs and inspect fare/Hopper fields. Do not treat each bus leg as a separately chargeable fare.",
+      "journey": {
+      "from": "Trafalgar Square, London",
+      "to": "Canary Wharf, London",
+        "modes": ["bus"]
+      },
+      "fareTo": []
+    },
+    {
+      "name": "rail-transfer",
+      "purpose": "Candidate National Rail case; verify the returned route includes a transfer and inspect its fare basis. FareTo support must be established from its actual response.",
+      "journey": {
+        "from": "London Bridge National Rail Station",
+        "to": "1000138",
+        "modes": ["national-rail", "tube", "elizabeth-line"]
+      },
+      "fareTo": []
+    },
+    {
+      "name": "osi-hammersmith",
+      "purpose": "Candidate route via the TfL-listed Hammersmith OSI. Confirm the returned route really interchanges between the paired Hammersmith stations; the API route is not a simulation of card taps.",
+      "journey": {
+        "from": "940GZZLUGHK",
+        "to": "940GZZLUECT",
+        "via": "Hammersmith",
+        "modes": ["tube"]
+      },
+      "fareTo": [
+        {
+          "from": "940GZZLUGHK",
+          "to": "940GZZLUECT",
+          "purpose": "Whole rail-station-pair reference; check returned route options and fare caveats"
+        }
+      ]
+    },
+    {
+      "name": "split-journey-reference",
+      "purpose": "Compare a continuous Charing Cross-to-Baker Street planner journey with two separately queried PAYG journey legs via Oxford Circus. Separate API requests do not emulate actual taps or prove a user's charged amount.",
+      "journeys": [
+        {
+          "from": "940GZZLUCHX",
+          "to": "940GZZLUOXC",
+          "time": "09:00",
+          "modes": ["tube"],
+          "purpose": "First separately queried station-to-station journey"
+        },
+        {
+          "from": "940GZZLUOXC",
+          "to": "940GZZLUBST",
+          "time": "09:30",
+          "modes": ["tube"],
+          "purpose": "Second separately queried station-to-station journey"
+        },
+        {
+          "from": "940GZZLUCHX",
+          "to": "940GZZLUBST",
+          "time": "09:00",
+          "modes": ["tube"],
+          "purpose": "Continuous end-to-end reference journey"
+        }
+      ],
+      "fareTo": []
+    },
+    {
+      "name": "zone-1-alternative",
+      "purpose": "Inspect candidate route options avoiding Zone 1 and their fare/tap fields. Journey Planner cannot simulate a passenger actually touching a pink reader; compare with TfL's Single Fare Finder and pink-reader guidance.",
+      "journey": {
+        "from": "940GZZLUFPK",
+        "to": "940GZZLUSTD",
+        "via": "940GZZLUH&I",
+        "modes": ["tube", "overground"]
+      },
+      "fareTo": [
+        {
+          "from": "940GZZLUFPK",
+          "to": "940GZZLUSTD",
+          "purpose": "Whole station-pair single-fare reference; inspect alternative route rows and caveats"
+        }
+      ]
+    },
+    {
+      "name": "peak-boundary",
+      "purpose": "Compare same route on the same weekday around the published peak boundaries; observe returned chargeLevel, peak and offPeak rather than assuming boundary inclusivity.",
+      "journeys": [
+        {"from": "940GZZLUCHX", "to": "940GZZLUBST", "date": "20261027", "time": "09:29", "modes": ["tube"], "purpose": "09:29 local departure"},
+        {"from": "940GZZLUCHX", "to": "940GZZLUBST", "date": "20261027", "time": "09:30", "modes": ["tube"], "purpose": "09:30 local departure"},
+        {"from": "940GZZLUCHX", "to": "940GZZLUBST", "date": "20261027", "time": "15:59", "modes": ["tube"], "purpose": "15:59 local departure"},
+        {"from": "940GZZLUCHX", "to": "940GZZLUBST", "date": "20261027", "time": "16:00", "modes": ["tube"], "purpose": "16:00 local departure"}
+      ],
+      "fareTo": []
+    }
+  ]
+}

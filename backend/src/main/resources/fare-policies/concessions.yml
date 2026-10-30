@@ -1,0 +1,97 @@
+catalogueVersion: 1
+reviewedOn: "2026-10-27"
+busTramFareSchedule:
+  periods:
+    - effectiveFrom: "2026-10-27T00:00"
+      effectiveUntil: "2026-11-01T04:30"
+      adultSingleFare: "1.75"
+      discountedSingleFare: "0.85"
+      adultDailyCap: "5.25"
+      discountedDailyCap: "2.55"
+      adultWeeklyCap: "24.70"
+    - effectiveFrom: "2026-11-01T04:30"
+      effectiveUntil: null
+      adultSingleFare: "1.85"
+      discountedSingleFare: "0.90"
+      adultDailyCap: "5.55"
+      discountedDailyCap: "2.70"
+      adultWeeklyCap: "26.10"
+policies:
+  - id: jobcentre-plus
+    effectiveDate: null
+    titleEn: Jobcentre Plus Travel Discount
+    titleZh: Jobcentre Plus 交通优惠
+    modes: [bus, tube, tram, dlr, london-overground, elizabeth-line, national-rail]
+    paymentBasis: Oyster with the discount set and a valid Jobcentre Plus Travel Discount Card
+    timeBasis: Provider fare item and supported route mode
+    qualifyingEvent: 50% discount on eligible adult pay-as-you-go fares
+    fareScope: Supported bus/rail fare items; does not apply to contactless fare payment
+    eligibilityEn: Current TfL criteria include specified benefits and unemployment periods; the valid photocard discount must be set on Oyster, and both cards must be carried.
+    eligibilityZh: TfL 当前条件包括指定福利及失业时长；须将有效 photocard 优惠设入 Oyster，并随身携带两张卡。
+    source: https://tfl.gov.uk/fares/free-and-discounted-travel/jobcentre-plus-travel-discount
+    paygDiscount: true
+  - id: railcard-offpeak
+    effectiveDate: null
+    titleEn: National Railcard (off-peak)
+    titleZh: National Railcard（非高峰）
+    modes: [tube, dlr, london-overground, elizabeth-line, national-rail]
+    paymentBasis: Oyster with a supported Railcard discount added
+    timeBasis: Journey Planner fare item chargeLevel
+    qualifyingEvent: One-third discount on eligible off-peak pay-as-you-go rail fares
+    fareScope: Eligible rail fare item(s) only; buses and trams excluded
+    eligibilityEn: 16-25, 26-30, Senior, HM Forces and Veterans Railcards can be added to Oyster; the provider must identify the relevant off-peak rail item.
+    eligibilityZh: 16-25、26-30、Senior、HM Forces 和 Veterans Railcard 可加入 Oyster；提供方需能识别相关非高峰铁路票价项。
+    source: https://tfl.gov.uk/fares/free-and-discounted-travel/national-railcard-discount
+    paygDiscount: true
+  - id: disabled-persons-railcard
+    effectiveDate: null
+    titleEn: Disabled Persons Railcard
+    titleZh: Disabled Persons Railcard
+    modes: [tube, dlr, london-overground, elizabeth-line, national-rail]
+    paymentBasis: Oyster with Disabled Persons Railcard discount added
+    timeBasis: Journey Planner fare item chargeLevel
+    qualifyingEvent: One-third discount on eligible peak and off-peak pay-as-you-go rail fares
+    fareScope: Eligible rail fare item(s) only; buses and trams excluded
+    eligibilityEn: The Railcard discount must be added to Oyster; rail fare-item scope must be known.
+    eligibilityZh: 须将该 Railcard 优惠加入 Oyster，并能确认铁路票价项范围。
+    source: https://tfl.gov.uk/fares/free-and-discounted-travel/national-railcard-discount
+    paygDiscount: true
+  - id: student-18plus
+    effectiveDate: null
+    titleEn: 18+ Student Oyster photocard
+    titleZh: 18+ Student Oyster photocard
+    modes: [bus, tram, tube, rail]
+    paymentBasis: 18+ Student Oyster photocard season ticket
+    timeBasis: Ticket product, not journey duration
+    qualifyingEvent: 30% off adult-rate Travelcards and Bus & Tram Pass season tickets; no single PAYG discount
+    fareScope: Season ticket products only; no discount on single pay-as-you-go fares
+    eligibilityEn: This product discount does not reduce a single-journey pay-as-you-go fare.
+    eligibilityZh: 此优惠适用于指定季票，不会降低单程 PAYG 票价。
+    source: https://tfl.gov.uk/fares/free-and-discounted-travel/18-plus-student-oyster-photocard
+    paygDiscount: false
+  - id: bus-tram-discount
+    effectiveDate: null
+    titleEn: Bus & Tram Discount photocard
+    titleZh: Bus & Tram Discount photocard
+    modes: [bus, tram]
+    paymentBasis: Bus & Tram Discount photocard with its discount set on Oyster
+    timeBasis: Bus/tram fare item
+    qualifyingEvent: 50% off eligible adult pay-as-you-go bus and tram fares
+    fareScope: Bus and tram fare items only
+    eligibilityEn: Applicants must live in a London borough, be aged 18-60, meet TfL's listed benefit criteria and receive no other free/discounted travel; set the photocard discount on Oyster.
+    eligibilityZh: 申请人须居住在伦敦 borough、年龄 18 至 60 岁、符合 TfL 指定福利条件，且未享有其他免费或优惠交通；还须将 photocard 优惠设入 Oyster。
+    source: https://tfl.gov.uk/fares/free-and-discounted-travel/bus-and-tram-discount
+    paygDiscount: true
+  - id: care-leaver-18-25
+    effectiveDate: null
+    titleEn: 18-25 Care Leaver Oyster photocard
+    titleZh: 18-25 Care Leaver Oyster photocard
+    modes: [bus, tram]
+    paymentBasis: Eligible 18-25 Care Leaver Oyster photocard
+    timeBasis: Bus/tram fare item
+    qualifyingEvent: 50% off eligible adult pay-as-you-go bus and tram fares
+    fareScope: Bus and tram fare items only
+    eligibilityEn: Must be a London care leaver aged 18-25, live in a London borough and receive no other free/discounted travel.
+    eligibilityZh: 须为 18 至 25 岁的伦敦离院照护青年、居住在伦敦 borough，且未享有其他免费或优惠交通。
+    source: https://tfl.gov.uk/fares/free-and-discounted-travel/18-25-care-leaver-oyster-photocard
+    paygDiscount: true
